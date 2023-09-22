@@ -16,3 +16,17 @@ img {
   display: block;
   max-width: 100%;
 }
+
+.btn-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.btn-color {
+  width: 100px;
+  height: 30px;
+  font-size: 20px;
+  border-radius: 0%;
+  text-transform: uppercase;
+}
