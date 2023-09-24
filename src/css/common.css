@@ -30,3 +30,20 @@ img {
   border-radius: 0%;
   text-transform: uppercase;
 }
+
+.field {
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+}
+
+.field .value {
+  font-size:xx-large;
+  font-weight: bold;
+}
+
+.timer {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+}
