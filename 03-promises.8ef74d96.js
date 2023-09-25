@@ -1,0 +1,2 @@
+const e=document.querySelectorAll("input"),l=document.querySelector("button");let t;l.addEventListener("click",(l=>{l.preventDefault();let o=1,n=1*e[0].value;setTimeout((()=>{t=setInterval((()=>{((e,l)=>{Math.random()>.3?console.log(`✅ Fulfilled promise ${e} in ${l}ms`):console.log(`❌ Rejected promise ${e} in ${l}ms`)})(o,n),o++,n+=1*e[1].value,o-1>=e[2].value&&clearInterval(t)}),e[1].value)}),e[0].value-e[1].value)}));
+//# sourceMappingURL=03-promises.8ef74d96.js.map
