@@ -13,20 +13,21 @@ const createPromise = (position, delay) => {
   }
 }
 
-const newTask = (event) => {
-  event.preventDefault()
+const newTask = event => {
+  event.preventDefault();
   let meter = 1;
-  let delay = input[0].value*1;
+  let delay = Number(input[0].value);
   setTimeout(() => {
+    createPromise(meter, delay);
     timerId = setInterval(() => {
-      createPromise(meter, delay)
       meter++;
-      delay = delay + input[1].value*1
-      if (meter - 1 >= input[2].value) {
-        clearInterval(timerId)
+      delay += Number(input[1].value);
+      createPromise(meter, delay);
+      if (meter > Number(input[2].value) - 1) {
+        clearInterval(timerId);
       }
-    }, input[1].value)
-  }, input[0].value - input[1].value)
-}
+    }, input[1].value);
+  }, input[0].value);
+};
 
 btnCreate.addEventListener("click", newTask)
